@@ -43,21 +43,14 @@ class Ball {
     
     strokeWeight(5);
     noFill();
-    beginShape();
+ 
     for (let i = 0; i < windowWidth / ballRadius; i++) {
       x = x + ballRadius;
       points[i] = new Ball(x*tan(i*0.01), y*sin(x*0.1));
       points[i].show();
-      vertex(x*tan(i*0.01), y*sin(x*0.1));
+      
     }
-    endShape();
 
-/*     let hdx=0;
-    for (let ball of points){
-        let temp = points[hdx+1];
-        let temp2 = points[hdx];
-        line(points[points.length-1.x],);
-    } */
   }
   
   
