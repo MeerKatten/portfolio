@@ -22,9 +22,11 @@ class Ball {
     canvas = createCanvas(windowWidth, windowHeight);
     canvas.position(0, 0);
     canvas.style("z-index", "-50");
+   
   }
   
   function draw() {
+    rotate(radians(0));
     translate(0, 200);
     strokeWeight(5);
     stroke(255);
@@ -39,7 +41,7 @@ class Ball {
     x = cos(angleRadians) * radius;
     x = x + 50;
 
-    stroke(239, 68, 68, 100);
+    stroke(239, 68, 68);
     
     strokeWeight(5);
     noFill();
