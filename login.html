@@ -38,7 +38,7 @@
       <main class="h-screen flex items-center justify-center flex-col">
 
         <div class="bg-slate-200 p-6 rounded-lg shadow-xl">
-          <form id="signup-form" class="hidden">
+          <form id="signup-form" method="post" class="hidden">
             <div class="mb-6">
               <label class="block text-gray-700 font-medium mb-2" for="username">Username:</label>
               <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight bg-white focus:shadow-outline" type="text" id="username" autocomplete="username" name="username" required>
@@ -58,7 +58,7 @@
               <button id="show-login-form" class="bg-gray-300 hover:bg-gray-200 text-gray-700 py-1 px-4 rounded font-ff-roboto mx-2">Login</button>
             </div>
           </form>
-          <form id="login-form" class="">
+          <form id="login-form" method="post" class="">
             <div class="mb-6">
               <label class="block text-gray-700 font-medium mb-2" for="email">Email:</label>
               <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight bg-white focus:shadow-outline" id="email" type="email" autocomplete="email" name="email" required>
