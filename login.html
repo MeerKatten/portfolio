@@ -9,8 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sofia+Sans+Extra+Condensed:wght@200;400;700&display=swap" rel="stylesheet">
+    <script defer type="module" src="login.js"></script>
     <script defer src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
+<!--     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"></script> -->
+
 
 
 
@@ -37,7 +41,7 @@
           <form id="signup-form" class="hidden">
             <div class="mb-6">
               <label class="block text-gray-700 font-medium mb-2" for="username">Username:</label>
-              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight bg-white focus:shadow-outline" type="text" id="username" name="username" required>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight bg-white focus:shadow-outline" type="text" id="username" autocomplete="username" name="username" required>
             </div>
             <div class="mb-6">
               <label class="block text-gray-700 font-medium mb-2" for="email">Email:</label>
@@ -45,30 +49,30 @@
             </div>
             <div class="mb-6">
               <label class="block text-gray-700 font-medium mb-2" for="password">Password:</label>
-              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight bg-white focus:shadow-outline" type="password" id="password" name="password" required>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight bg-white focus:shadow-outline" type="password" autocomplete="new-password" id="password" name="password" required>
             </div>
             <div class="flex justify-center">
-            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded font-ff-roboto w-full mb-6">Sign Up</button>
+              <button type="submit" id="signup-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full mb-6">Sign Up</button>
             </div>
             <div class="flex justify-center">
-            <button id="show-login-form" class="bg-gray-300 hover:bg-gray-200 text-gray-700  py-1 px-4 rounded font-ff-roboto mx-2">Login</button>
-          </div>
+              <button id="show-login-form" class="bg-gray-300 hover:bg-gray-200 text-gray-700 py-1 px-4 rounded font-ff-roboto mx-2">Login</button>
+            </div>
           </form>
           <form id="login-form" class="">
             <div class="mb-6">
-              <label class="block text-gray-700 font-medium mb-2" for="username">Username:</label>
-              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight bg-white focus:shadow-outline" id="username" type="text" name="username" required>
+              <label class="block text-gray-700 font-medium mb-2" for="email">Email:</label>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight bg-white focus:shadow-outline" id="email" type="email" autocomplete="email" name="email" required>
             </div>
             <div class="mb-6">
               <label class="block text-gray-700 font-medium mb-2" for="password">Password:</label>
-              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight bg-white focus:shadow-outline" id="password" type="password" name="password" required>
+              <input class="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight bg-white focus:shadow-outline" id="password" type="password" autocomplete="current-password" name="password" required>
             </div>
             <div class="flex justify-center">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full mb-6" type="submit">Login</button>
+              <button id="login-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full mb-6" type="submit">Login</button>
             </div>
             <div class="flex justify-center">
               <button id="show-signup-form" class="bg-gray-300 hover:bg-gray-200 text-gray-700 py-1 px-4 rounded font-ff-roboto mx-2">Sign Up</button>
-              </div>
+            </div>
           </form>
         </div>
 
